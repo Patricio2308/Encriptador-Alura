@@ -22,7 +22,6 @@ pero no será evaluada. Buen proyecto !
 
 body {
     background-color: #D8DFE8;
-    position: relative;
 }
 
 .container {
@@ -44,26 +43,36 @@ body {
     width: 60%;
     height: 90vh;
     position: relative;
-   /*  background-color: brown; */
 }
 
 .areaTexto {
     display: flex;
     justify-content: center;
-    color: #0A3871;
-    width: 80%;
+    /* color: #0A3871; */
+    line-height: 1.5;
+    color: limegreen;
+    text-shadow: 0 0 8px #4de926c0;
+    font-family: monospace;
+    background-color: black;
+    width: 75%;
     height: 70%;
     resize: none;
+    padding: 1.5rem;
     border: none;
-    background-color: #ffffff00;
+    border-radius: 10px;
+    /* background-color: #ffffff00; */
 }
+
 
 .areaTexto:focus {
     outline: none;
 }
+.areaTexto::placeholder {
+    text-shadow: none;
+}
 
 #textoInput {
-    margin: 5rem auto;
+    margin: 6rem auto;
     font-size: 32px;
     height: 50%;
 }
