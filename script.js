@@ -1,5 +1,6 @@
-var encBtn = document.getElementById("encriptador");
-var desencBtn = document.getElementById("desencriptador");
+var encBtn = document.getElementById("encriptadorBtn");
+var desencBtn = document.getElementById("desencriptadorBtn");
+var copyBtn = document.getElementById("copiadoraBtn");
 var inputText = document.getElementById("textoInput");
 var areaText = document.getElementById("textoOutput");
 
@@ -16,6 +17,7 @@ function encriptar() {
         .replace(/u/g, 'ufat');
 
     areaText.textContent = frase;
+    inputText.value = "";
 }
 function desencriptar() {
     texto = inputText.value;
@@ -30,13 +32,11 @@ function desencriptar() {
 
     areaText.textContent = frase;
 }
-/* 
-La letra "e" es convertida para "enter"
-La letra "i" es convertida para "imes"
-La letra "a" es convertida para "ai"
-La letra "o" es convertida para "ober"
-La letra "u" es convertida para "ufat" */
 
+function copiar(){
+    navigator.clipboard.writeText(areaText.value);  
+}
 
 encBtn.onclick = encriptar;
 desencBtn.onclick = desencriptar;
+copyBtn.onclick = copiar;
