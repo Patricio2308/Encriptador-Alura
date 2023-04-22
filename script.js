@@ -1,7 +1,7 @@
 var encBtn = document.getElementById("encriptador");
 var desencBtn = document.getElementById("desencriptador");
-var inputText = document.querySelector("input");
-var areaText = document.querySelector("textarea");
+var inputText = document.getElementById("textoInput");
+var areaText = document.getElementById("textoOutput");
 
 var texto = '';
 
