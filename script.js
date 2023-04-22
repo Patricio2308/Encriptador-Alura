@@ -31,6 +31,7 @@ function desencriptar() {
         .replace(/enter/g, 'e');
 
     areaText.textContent = frase;
+    inputText.value = "";
 }
 
 function copiar(){
