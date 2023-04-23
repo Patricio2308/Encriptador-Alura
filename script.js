@@ -3,6 +3,8 @@ var desencBtn = document.getElementById("desencriptadorBtn");
 var copyBtn = document.getElementById("copiadoraBtn");
 var inputText = document.getElementById("textoInput");
 var areaText = document.getElementById("textoOutput");
+var areaImage = document.querySelector(".areaSinMensaje");
+var areaHide = document.querySelector(".areaOculta");
 
 var texto = '';
 
@@ -17,6 +19,8 @@ function encriptar() {
     .replace(/u/g, 'ufat');
     
     if (inputText.value != ""){
+        areaImage.style.display = "none";
+        areaHide.style.display = "block";
         areaText.textContent = frase;
         inputText.value = "";
     }
@@ -39,9 +43,11 @@ function desencriptar() {
 }
 
 function copiar(){
-    navigator.clipboard.writeText(areaText.value);  
+    navigator.clipboard.writeText(areaText.value);
+    inputText.focus();
 }
 
 encBtn.onclick = encriptar;
 desencBtn.onclick = desencriptar;
 copyBtn.onclick = copiar;
+
