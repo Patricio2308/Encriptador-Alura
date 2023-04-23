@@ -10,28 +10,32 @@ function encriptar() {
     texto = inputText.value;
     var frase = "";
     frase = texto
-        .replace(/e/g, 'enter')
-        .replace(/i/g, 'imes')
-        .replace(/a/g, 'ai')
-        .replace(/o/g, 'ober')
-        .replace(/u/g, 'ufat');
-
-    areaText.textContent = frase;
-    inputText.value = "";
+    .replace(/e/g, 'enter')
+    .replace(/i/g, 'imes')
+    .replace(/a/g, 'ai')
+    .replace(/o/g, 'ober')
+    .replace(/u/g, 'ufat');
+    
+    if (inputText.value != ""){
+        areaText.textContent = frase;
+        inputText.value = "";
+    }
 }
 function desencriptar() {
     texto = inputText.value;
     var frase = '';
-
+    
     frase = texto
-        .replace(/ufat/g, 'u')
-        .replace(/ober/g, 'o')
-        .replace(/ai/g, 'a')
-        .replace(/imes/g, 'i')
-        .replace(/enter/g, 'e');
-
-    areaText.textContent = frase;
-    inputText.value = "";
+    .replace(/ufat/g, 'u')
+    .replace(/ober/g, 'o')
+    .replace(/ai/g, 'a')
+    .replace(/imes/g, 'i')
+    .replace(/enter/g, 'e');
+    
+    if (inputText.value != ""){
+        areaText.textContent = frase;
+        inputText.value = "";
+    }
 }
 
 function copiar(){
