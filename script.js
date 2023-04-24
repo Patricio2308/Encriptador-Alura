@@ -44,6 +44,10 @@ function desencriptar() {
 function copiar(){
     navigator.clipboard.writeText(areaText.value);
     inputText.focus();
+    copyBtn.textContent = 'Copiado'
+    setTimeout(function() {
+        copyBtn.textContent = 'Copiar'
+    },1500)
 }
 
 encBtn.onclick = encriptar;
