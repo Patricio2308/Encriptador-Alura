@@ -4,7 +4,6 @@ var copyBtn = document.getElementById("copiadoraBtn");
 var inputText = document.getElementById("textoInput");
 var areaText = document.getElementById("textoOutput");
 var areaImage = document.querySelector(".areaSinMensaje");
-var areaHide = document.querySelector(".areaOculta");
 
 var texto = '';
 
@@ -20,7 +19,7 @@ function encriptar() {
     
     if (inputText.value != ""){
         areaImage.style.display = "none";
-        areaHide.style.display = "block";
+        document.querySelector(".areaOculta").style.display = "block";
         areaText.textContent = frase;
         inputText.value = "";
     }
