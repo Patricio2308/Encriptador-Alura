@@ -7,6 +7,19 @@ var areaImage = document.querySelector(".areaSinMensaje");
 
 var texto = '';
 
+/* Oculta la imagen y su texto, nuestra el texto desencriptado */
+function esconderImagen() {
+    areaImage.style.display = "none";
+    document.querySelector(".areaOculta").style.display = "block";
+}
+
+/* Agranda el cuadro de desencriptación en version Movil */
+function imprimirMovil(){
+    if (window.matchMedia('(max-width: 480px)').matches){
+    document.querySelector(".desencriptArea").style.height = `55vh` ;
+    }
+}
+
 function encriptar() {
     texto = inputText.value;
     var frase = "";
@@ -18,12 +31,13 @@ function encriptar() {
     .replace(/u/g, 'ufat');
     
     if (inputText.value != ""){
-        areaImage.style.display = "none";
-        document.querySelector(".areaOculta").style.display = "block";
+        esconderImagen()
         areaText.textContent = frase;
         inputText.value = "";
+        imprimirMovil();
     }
 }
+
 function desencriptar() {
     texto = inputText.value;
     var frase = '';
@@ -36,9 +50,12 @@ function desencriptar() {
     .replace(/enter/g, 'e');
     
     if (inputText.value != ""){
+        esconderImagen();
         areaText.textContent = frase;
         inputText.value = "";
+        imprimirMovil();
     }
+
 }
 
 function copiar(){
@@ -53,4 +70,10 @@ function copiar(){
 encBtn.onclick = encriptar;
 desencBtn.onclick = desencriptar;
 copyBtn.onclick = copiar;
+
+function autoAjuste(areaText) {
+    areaText.style.height = "auto"
+    areaText.style.height = areaText.scrollHeight + "px";
+    console.log("pulsa")
+}
 
