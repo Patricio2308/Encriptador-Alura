@@ -228,14 +228,11 @@ footer {
     .sectorInput {
         width: 100%;
         min-height: 300px;
-    }
-
-    .sectorInput {
         height: 70vh;
     }
 
     #textoInput {
-        width: 90%;
+        width: 87%;
         margin: 5rem auto 0;
     }
 
