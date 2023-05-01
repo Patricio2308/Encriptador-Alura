@@ -215,7 +215,7 @@ footer {
     }
 
     .advertencia {
-        width: 90%;
+        width: 95%;
     }
 
     .botonera {
@@ -224,14 +224,28 @@ footer {
     }
 
     .desencriptArea {
-        height: 20%;
         width: 100%;
+        height: auto;
         position: absolute;
         top: 78vh;
     }
 
+    /* Se modifica a auto, para adaptarse al textoOutput */
+    .areaOculta {
+        height: auto;
+    }
+
     #textoOutput {
-        height: 70%;
+        height: 20rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .areaSinMensaje {
+        margin: 2rem auto;
+    }
+
+    .areaSinMensaje h1 {
+        margin: 0 auto 1rem auto;
     }
 
     .areaSinMensaje img {
@@ -239,7 +253,8 @@ footer {
     }
 
     #copiadoraBtn {
-        bottom: 1.3rem;
+        position: unset;
+        margin-bottom: 1.5rem;
     }
 
 }
@@ -259,10 +274,6 @@ footer {
         margin: 4rem auto 0;
     }
 
-    .advertencia p {
-        margin: 0.1rem auto;
-    }
-
     .btn {
         width: 100%;
         height: 3.5rem;
@@ -274,9 +285,7 @@ footer {
     }
 
     .desencriptArea {
-        height: 40%;
-        position: absolute;
-        top: 67vh;
+        top: 70vh;
     }
 
     .areaSinMensaje {
@@ -290,10 +299,6 @@ footer {
 
     .areaSinMensaje p {
         line-height: 170%;
-    }
-
-    #copiadoraBtn {
-        bottom: 1rem;
     }
 
 }

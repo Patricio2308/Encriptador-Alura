@@ -13,15 +13,6 @@ function esconderImagen() {
     document.querySelector(".areaOculta").style.display = "block";
 }
 
-/* Agranda el cuadro de desencriptación en version Movil */
-function imprimirMovil(){
-    if (window.matchMedia('(max-width: 768px)').matches){
-        document.querySelector(".desencriptArea").style.height = `55vh` ;
-    } else {
-        document.querySelector(".desencriptArea").style.height = `100%`;
-    }
-}
-
 
 function encriptar() {
     texto = inputText.value;
@@ -37,7 +28,6 @@ function encriptar() {
         areaText.textContent = frase;
         inputText.value = "";
         esconderImagen();
-        imprimirMovil();
     }
 }
 
@@ -56,7 +46,6 @@ function desencriptar() {
         areaText.textContent = frase;
         inputText.value = "";
         esconderImagen();
-        imprimirMovil();
     }
 
 }
