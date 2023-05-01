@@ -186,13 +186,67 @@ footer {
     bottom: 0;
 }
 
-@media screen and (max-width:480px) {
+@media screen and (max-width:768px) {
 
     .container {
         display: flex;
+        justify-content: center;
         flex-direction: column;
         margin: 1.5rem auto;
         position: relative;
+        height: 75vh;
+    }
+
+    .sectorInput {
+        width: 100%;
+    }
+
+    .sectorInput {
+        height: 70vh;
+    }
+
+    #textoInput {
+        width: 90%;
+        margin: 5rem auto 0;
+    }
+
+    .advertencia p {
+        font-size: 12px;
+    }
+
+    .advertencia {
+        width: 90%;
+    }
+
+    .botonera {
+        width: 100%;
+        margin: auto;
+    }
+
+    .desencriptArea {
+        height: 20%;
+        width: 100%;
+        position: absolute;
+        top: 78vh;
+    }
+
+    #textoOutput {
+        height: 70%;
+    }
+
+    .areaSinMensaje img {
+        display: none;
+    }
+
+    #copiadoraBtn {
+        bottom: 1.3rem;
+    }
+
+}
+
+@media screen and (max-width:480px) {
+
+    .container {
         height: 65vh;
     }
 
@@ -201,7 +255,6 @@ footer {
     }
 
     #textoInput {
-        width: 90%;
         height: 28vh;
         margin: 4rem auto 0;
     }
@@ -217,20 +270,26 @@ footer {
     }
 
     .botonera {
-        width: 100%;
-        margin: auto;
         flex-direction: column;
     }
 
     .desencriptArea {
         height: 40%;
-        width: 100%;
         position: absolute;
         top: 67vh;
     }
 
-    .areaSinMensaje img {
-        display: none;
+    .areaSinMensaje {
+        height: 95%;
+    }
+
+    .areaSinMensaje h1 {
+        line-height: 140%;
+        margin-bottom: 0.7rem;
+    }
+
+    .areaSinMensaje p {
+        line-height: 170%;
     }
 
     #copiadoraBtn {

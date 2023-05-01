@@ -15,10 +15,13 @@ function esconderImagen() {
 
 /* Agranda el cuadro de desencriptación en version Movil */
 function imprimirMovil(){
-    if (window.matchMedia('(max-width: 480px)').matches){
-    document.querySelector(".desencriptArea").style.height = `55vh` ;
+    if (window.matchMedia('(max-width: 768px)').matches){
+        document.querySelector(".desencriptArea").style.height = `55vh` ;
+    } else {
+        document.querySelector(".desencriptArea").style.height = `100%`;
     }
 }
+
 
 function encriptar() {
     texto = inputText.value;
@@ -31,9 +34,9 @@ function encriptar() {
     .replace(/u/g, 'ufat');
     
     if (inputText.value != ""){
-        esconderImagen()
         areaText.textContent = frase;
         inputText.value = "";
+        esconderImagen();
         imprimirMovil();
     }
 }
@@ -50,9 +53,9 @@ function desencriptar() {
     .replace(/enter/g, 'e');
     
     if (inputText.value != ""){
-        esconderImagen();
         areaText.textContent = frase;
         inputText.value = "";
+        esconderImagen();
         imprimirMovil();
     }
 
@@ -71,9 +74,4 @@ encBtn.onclick = encriptar;
 desencBtn.onclick = desencriptar;
 copyBtn.onclick = copiar;
 
-function autoAjuste(areaText) {
-    areaText.style.height = "auto"
-    areaText.style.height = areaText.scrollHeight + "px";
-    console.log("pulsa")
-}
 
