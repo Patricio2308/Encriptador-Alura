@@ -148,6 +148,28 @@ body {
     margin: 1rem 0;
 }
 
+.muñecos {
+    position: relative;
+}
+
+/* Se genera otra imagen, se coloca por encima de la original y generar animación */
+#muñeco2 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: desaparece 6s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes desaparece {
+    0%,100% {
+        opacity: 0;
+    }
+    40%,60% {
+        opacity: 100;
+    }
+}
+
 .areaSinMensaje h1 {
     margin: 1rem 0;
     font-size: 24px;
@@ -250,7 +272,7 @@ footer {
         margin: 0 auto 1rem auto;
     }
 
-    .areaSinMensaje img {
+    .muñecos {
         display: none;
     }
 
