@@ -13,50 +13,47 @@ function esconderImagen() {
     document.querySelector(".areaOculta").style.display = "block";
 }
 
-
-function encriptar() {
-    texto = inputText.value;
-    var frase = "";
-    frase = texto
-    .replace(/e/g, 'enter')
-    .replace(/i/g, 'imes')
-    .replace(/a/g, 'ai')
-    .replace(/o/g, 'ober')
-    .replace(/u/g, 'ufat');
-    
-    if (inputText.value != ""){
-        areaText.textContent = frase;
+function imprimirTexto() {
+    if (inputText.value != "") {
+        areaText.textContent = texto;
         inputText.value = "";
         esconderImagen();
     }
+}
+
+function encriptar() {
+    texto = inputText.value;
+
+    texto = texto
+        .replace(/e/g, 'enter')
+        .replace(/i/g, 'imes')
+        .replace(/a/g, 'ai')
+        .replace(/o/g, 'ober')
+        .replace(/u/g, 'ufat');
+
+    imprimirTexto();
 }
 
 function desencriptar() {
     texto = inputText.value;
-    var frase = '';
-    
-    frase = texto
-    .replace(/ufat/g, 'u')
-    .replace(/ober/g, 'o')
-    .replace(/ai/g, 'a')
-    .replace(/imes/g, 'i')
-    .replace(/enter/g, 'e');
-    
-    if (inputText.value != ""){
-        areaText.textContent = frase;
-        inputText.value = "";
-        esconderImagen();
-    }
 
+    texto = texto
+        .replace(/ufat/g, 'u')
+        .replace(/ober/g, 'o')
+        .replace(/ai/g, 'a')
+        .replace(/imes/g, 'i')
+        .replace(/enter/g, 'e');
+
+    imprimirTexto();
 }
 
-function copiar(){
+function copiar() {
     navigator.clipboard.writeText(areaText.value);
     inputText.focus();
     copyBtn.textContent = 'Copiado'
-    setTimeout(function() {
+    setTimeout(function () {
         copyBtn.textContent = 'Copiar'
-    },1500)
+    }, 1500)
 }
 
 encBtn.onclick = encriptar;

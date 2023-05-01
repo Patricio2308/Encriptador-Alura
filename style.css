@@ -148,7 +148,7 @@ body {
     margin: 1rem 0;
 }
 
-.muñecos {
+.muñeco {
     position: relative;
 }
 
@@ -162,10 +162,14 @@ body {
 }
 
 @keyframes desaparece {
-    0%,100% {
+
+    0%,
+    100% {
         opacity: 0;
     }
-    40%,60% {
+
+    40%,
+    60% {
         opacity: 100;
     }
 }
@@ -190,7 +194,7 @@ body {
 #textoOutput {
     margin: 2rem auto;
     font-size: 24px;
-    height: 65%;  
+    height: 65%;
 }
 
 #copiadoraBtn {
@@ -216,7 +220,7 @@ footer {
         display: flex;
         justify-content: center;
         flex-direction: column;
-        margin: 1.2rem auto ;
+        margin: 1.2rem auto;
         position: relative;
         height: 100%;
     }
@@ -255,11 +259,11 @@ footer {
         display: block;
         margin: 2rem auto 0.5rem;
     }
-    
+
     .areaOculta {
         margin-bottom: 1.5rem;
     }
-    
+
     #textoOutput {
         min-height: 20rem;
         margin-bottom: 1.5rem;
@@ -273,7 +277,7 @@ footer {
         margin: 0 auto 1rem auto;
     }
 
-    .muñecos {
+    .muñeco {
         display: none;
     }
 
@@ -285,7 +289,7 @@ footer {
 }
 
 @media screen and (max-width:480px) {
-    
+
     .sectorInput {
         height: 65vh;
     }
