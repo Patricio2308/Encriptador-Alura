@@ -1,6 +1,6 @@
 body {
     background-color: #e7e9f0;
-    background-image: linear-gradient(90deg, #f3f5fa, #eaedf5, #cdcfd4, #cdced3);
+    background-image: linear-gradient(90deg, #f3f5fa, #eceff7, #cdcfd4, #cdced3);
     font-family: 'Inter', sans-serif;
 }
 
@@ -46,11 +46,11 @@ body {
     width: 80%;
     resize: none;
     border: none;
-    color: #32cd32;
+    color: #35d335;
     border-radius: 10px;
     font-family: monospace;
     background-color: black;
-    text-shadow: 0 0 6px #4de926c0;
+    text-shadow: 0 0 8px #4de926c0;
     filter: drop-shadow(3px 3px 2px rgb(0 0 0 / 0.4));
 }
 
@@ -66,6 +66,7 @@ body {
     margin: 6rem auto;
     font-size: 32px;
     height: 50%;
+    opacity: 0.95;
 }
 
 .advertencia {
@@ -162,12 +163,12 @@ body {
 }
 
 @keyframes desaparece {
-
+    
     0%,
     100% {
         opacity: 0;
     }
-
+    
     40%,
     60% {
         opacity: 100;
@@ -195,6 +196,8 @@ body {
     margin: 2rem auto;
     font-size: 24px;
     height: 65%;
+    opacity: 0.9;
+    background-image: radial-gradient(circle at 0% 0%, #111 20%, #000, #000, #000);
 }
 
 #copiadoraBtn {
@@ -209,6 +212,7 @@ body {
 
 footer {
     width: 100%;
+    font-size: large;
     text-align: center;
     position: fixed;
     bottom: 0;
@@ -255,7 +259,7 @@ footer {
         width: 100%;
         height: auto;
         display: block;
-        margin: 2rem auto 0.5rem;
+        margin: 2rem auto 1rem;
     }
 
     .areaOculta {
