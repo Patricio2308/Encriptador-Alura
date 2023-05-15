@@ -48,7 +48,6 @@ function encriptar() {
 function desencriptar() {
     texto = inputText.value;
 
-    restricciones()
     texto = texto
         .replace(/ufat/g, 'u')
         .replace(/ober/g, 'o')
