@@ -14,29 +14,41 @@ function esconderImagen() {
 }
 
 function imprimirTexto() {
-    if (inputText.value != "") {
+    if (inputText.value.trim() != "") {
         areaText.textContent = texto;
         inputText.value = "";
+        restricciones();
         esconderImagen();
     }
+}
+function restricciones() {
+    var regexAcento = /[\u00C0-\u00FF]/g;
+    var regexMayus = /[A-Z]/g;
+
+    if (regexAcento.test(texto)){
+        areaText.innerHTML = "&#128369; DENEGADO &#128369;\nEl texto no debe contener acentos ni caracteres especiales."; 
+    } else if (regexMayus.test(texto)) {
+        areaText.innerHTML = "&#128369; DENEGADO &#128369;\nEl texto no debe contener letras mayúsculas.";
+    }
+    texto = "";
 }
 
 function encriptar() {
     texto = inputText.value;
-
+    
     texto = texto
         .replace(/e/g, 'enter')
         .replace(/i/g, 'imes')
         .replace(/a/g, 'ai')
         .replace(/o/g, 'ober')
         .replace(/u/g, 'ufat');
-
     imprimirTexto();
 }
 
 function desencriptar() {
     texto = inputText.value;
 
+    restricciones()
     texto = texto
         .replace(/ufat/g, 'u')
         .replace(/ober/g, 'o')
